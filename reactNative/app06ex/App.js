@@ -28,8 +28,9 @@ export default function App() {
           }}
           title="Casa"
           description="Casa"
-          image={require("./assets/icon.png")}
-        />
+        >
+          <Image source={require("./assets/lar.png")} style={styles.markerIcon} />
+        </Marker>
 
         <Marker
           coordinate={{
@@ -38,20 +39,21 @@ export default function App() {
           }}
           title="Fatec Cotia"
           description="Fatec Cotia"
-          image={require("./assets/adaptive-icon.png")}
-        />
+        >
+          <Image
+            source={require("./assets/faculdade.png")}
+            style={styles.markerIcon}
+          />
+        </Marker>
       </MapView>
 
       <View style={styles.footer}>
         <View style={styles.legendItem}>
-          <Image source={require("./assets/icon.png")} style={styles.legendIcon} />
+          <Image source={require("./assets/lar.png")} style={styles.legendIcon} />
           <Text style={styles.legendText}>Casa</Text>
         </View>
         <View style={styles.legendItem}>
-          <Image
-            source={require("./assets/adaptive-icon.png")}
-            style={styles.legendIcon}
-          />
+          <Image source={require("./assets/faculdade.png")} style={styles.legendIcon} />
           <Text style={styles.legendText}>Fatec Cotia</Text>
         </View>
       </View>
@@ -84,6 +86,12 @@ const styles = StyleSheet.create({
   map: {
     flex: 1,
   },
+  markerIcon: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    resizeMode: "contain",
+  },
   footer: {
     flexDirection: "row",
     justifyContent: "space-around",
@@ -99,10 +107,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   legendIcon: {
-    width: 28,
-    height: 28,
+    width: 24,
+    height: 24,
     marginRight: 8,
-    borderRadius: 6,
+    borderRadius: 12,
   },
   legendText: {
     color: "#0f172a",
