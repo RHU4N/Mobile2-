@@ -75,6 +75,28 @@ const styles = StyleSheet.create({
   crudBody: {
     flex: 1,
   },
+  menuContainer: {
+    gap: 12,
+    marginTop: 8,
+  },
+  menuButton: {
+    backgroundColor: "#ffffff",
+    borderRadius: 14,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: "#dbe4ee",
+  },
+  menuButtonText: {
+    color: "#111827",
+    fontSize: 17,
+    fontWeight: "700",
+    marginBottom: 4,
+  },
+  menuButtonDescription: {
+    color: "#4b5563",
+    fontSize: 13,
+    lineHeight: 18,
+  },
   secondaryButton: {
     borderColor: "#6b7280",
     borderWidth: 1,
@@ -162,6 +184,75 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
   },
   deleteButtonText: {
+    color: "#fff",
+    fontWeight: "700",
+  },
+  emptyStateCard: {
+    backgroundColor: "#ffffff",
+    borderRadius: 14,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: "#e5e7eb",
+    marginBottom: 12,
+  },
+  emptyStateTitle: {
+    fontSize: 18,
+    fontWeight: "700",
+    color: "#111827",
+    marginBottom: 6,
+  },
+  emptyStateText: {
+    color: "#4b5563",
+    lineHeight: 20,
+    marginBottom: 12,
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: "rgba(15, 23, 42, 0.55)",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 20,
+  },
+  modalContent: {
+    width: "100%",
+    backgroundColor: "#fff",
+    borderRadius: 16,
+    padding: 18,
+  },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: "700",
+    color: "#111827",
+    marginBottom: 8,
+  },
+  modalText: {
+    color: "#4b5563",
+    lineHeight: 20,
+    marginBottom: 16,
+  },
+  modalActions: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    gap: 10,
+  },
+  modalCancelButton: {
+    borderWidth: 1,
+    borderColor: "#9ca3af",
+    borderRadius: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 14,
+  },
+  modalCancelButtonText: {
+    color: "#374151",
+    fontWeight: "600",
+  },
+  modalDeleteButton: {
+    backgroundColor: "#dc2626",
+    borderRadius: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 14,
+  },
+  modalDeleteButtonText: {
     color: "#fff",
     fontWeight: "700",
   },
