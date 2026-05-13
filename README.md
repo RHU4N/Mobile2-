@@ -1,4 +1,4 @@
-# Mobile2-
+# Mobile2
 
 Repositório com exercícios e projetos de estudos em **React Native** e **Vue.js**.
 
@@ -54,7 +54,7 @@ Cada pasta funciona de forma independente. Entre no projeto desejado e instale a
 ### React Native / Expo
 
 ```bash
-cd /home/runner/work/Mobile2-/Mobile2-/reactNative/NOME_DO_PROJETO
+cd reactNative/NOME_DO_PROJETO
 npm install
 npm start
 ```
@@ -68,7 +68,7 @@ Comandos comuns disponíveis:
 ### Vue.js / Vite
 
 ```bash
-cd /home/runner/work/Mobile2-/Mobile2-/vuejs/NOME_DO_PROJETO
+cd vuejs/NOME_DO_PROJETO
 npm install
 npm run dev
 ```
