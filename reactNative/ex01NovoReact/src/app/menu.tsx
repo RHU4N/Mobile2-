@@ -65,7 +65,7 @@ export default function Menu() {
   }
 
   function excluir(id: string) {
-    // fallback for web where native Alert might not behave as expected
+    // Para web, usar confirm() nativo para evitar problemas com Alert e bloqueio de pop-ups. Em mobile, usar Alert do React Native.
     if (Platform.OS === "web") {
       // eslint-disable-next-line no-restricted-globals
       const ok = confirm("Deseja apagar este cadastro?");

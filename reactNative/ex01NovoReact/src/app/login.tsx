@@ -15,13 +15,15 @@ export default function Login() {
   const [senha, setSenha] = useState("");
 
   function entrar() {
-    if (!usuario.trim() || !senha.trim()) {
+    if (usuario === "admin" && senha === "123") {
+      router.replace("/menu");
+    } else if(!usuario.trim() || !senha.trim()) {
       Alert.alert("Atenção", "Preencha usuário e senha.");
-      return;
+    } else {
+      Alert.alert("Atenção", "Usuário ou senha incorretos.");
     }
-
-    router.replace("/menu");
   }
+  
 
   return (
     <View style={styles.container}>
