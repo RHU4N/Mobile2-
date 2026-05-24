@@ -2,6 +2,7 @@ import { useRouter } from "expo-router";
 import { useState } from "react";
 import {
     Alert,
+    Platform,
     Pressable,
     StyleSheet,
     Text,
@@ -18,9 +19,19 @@ export default function Login() {
     if (usuario === "admin" && senha === "123") {
       router.replace("/menu");
     } else if(!usuario.trim() || !senha.trim()) {
-      Alert.alert("Atenção", "Preencha usuário e senha.");
+      if (Platform.OS === "web") {
+        // eslint-disable-next-line no-restricted-globals
+        alert("Atenção: Preencha usuário e senha.");
+      } else {
+        Alert.alert("Atenção", "Preencha usuário e senha.");
+      }
     } else {
-      Alert.alert("Atenção", "Usuário ou senha incorretos.");
+      if (Platform.OS === "web") {
+        // eslint-disable-next-line no-restricted-globals
+        alert("Atenção: Usuário ou senha incorretos.");
+      } else {
+        Alert.alert("Atenção", "Usuário ou senha incorretos.");
+      }
     }
   }
   
