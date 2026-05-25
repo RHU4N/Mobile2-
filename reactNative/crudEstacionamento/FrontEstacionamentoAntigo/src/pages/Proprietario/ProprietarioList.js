@@ -1,7 +1,8 @@
 import { View, Text, SafeAreaView, Keyboard, FlatList } from "react-native";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Button, Icon, ListItem } from "react-native-elements";
+import { Button, ListItem } from "react-native-elements";
+import { MaterialIcons } from "@expo/vector-icons";
 import styles from "./styles.js";
 export default (ProprietarioList) => {
   //Variável que recebe os dados da API
@@ -38,12 +39,12 @@ export default (ProprietarioList) => {
             ProprietarioList.navigation.navigate("ProprietarioEdit", data)
           }
           type="clear"
-          icon={<Icon name="edit" size={25} color="orange" />}
+          icon={<MaterialIcons name="edit" size={25} color="orange" />}
         />
         <Button
           onPress={() => handleDelete(data.id_proprietario)}
           type="clear"
-          icon={<Icon name="delete" size={25} color="red" />}
+          icon={<MaterialIcons name="delete" size={25} color="red" />}
         />
       </>
     );

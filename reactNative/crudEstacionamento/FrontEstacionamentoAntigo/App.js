@@ -3,9 +3,12 @@ import { createStackNavigator } from "@react-navigation/stack";
 import ProprietarioForm from "./src/pages/Proprietario/ProprietarioForm";
 import ProprietarioList from "./src/pages/Proprietario/ProprietarioList";
 import ProprietarioEdit from "./src/pages/Proprietario/ProprietarioEdit";
-import Veiculo from "./src/pages/Veiculo/VeiculoList";
+import VeiculoList from "./src/pages/Veiculo/VeiculoList";
+import VeiculoForm from "./src/pages/Veiculo/VeiculoForm";
+import VeiculoEdit from "./src/pages/Veiculo/VeiculoEdit";
 import Home from "./src/pages/Home";
-import { Icon, Button } from "react-native-elements";
+import { Button } from "react-native-elements";
+import { MaterialIcons } from "@expo/vector-icons";
 const Stack = createStackNavigator();
 const App = () => {
   return (
@@ -21,7 +24,7 @@ const App = () => {
                 <Button
                   onPress={() => navigation.navigate("ProprietarioForm")}
                   type="clear"
-                  icon={<Icon name="add" size={25} color="white" />}
+                  icon={<MaterialIcons name="add" size={25} color="white" />}
                 />
               ),
             };
@@ -50,9 +53,30 @@ const App = () => {
         />
         <Stack.Screen
           name="VeiculoList"
-          component={Veiculo}
-          options={{
+          component={VeiculoList}
+          options={({ navigation }) => ({
             title: "Lista de Veículos",
+            headerRight: () => (
+              <Button
+                onPress={() => navigation.navigate("VeiculoForm")}
+                type="clear"
+                icon={<MaterialIcons name="add" size={25} color="white" />}
+              />
+            ),
+          })}
+        />
+        <Stack.Screen
+          name="VeiculoForm"
+          component={VeiculoForm}
+          options={{
+            title: "Formulário de Veículos",
+          }}
+        />
+        <Stack.Screen
+          name="VeiculoEdit"
+          component={VeiculoEdit}
+          options={{
+            title: "Formulário de Edição",
           }}
         />
       </Stack.Navigator>

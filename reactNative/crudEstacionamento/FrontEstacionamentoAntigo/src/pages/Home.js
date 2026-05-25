@@ -13,7 +13,7 @@ const Home = ({ navigation }) => {
     <View style={styles.container}>
       <View style={styles.imageContainer}>
         <Image
-          source={require("../assets/icon.png")}
+          source={require("../../assets/estacionamento.png")}
           style={styles.image}
         />
       </View>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     width: "80%",
     alignItems: "center",
-    margin: "20px",
+    margin: 20,
   },
   buttonText: {
     color: "#fff",

@@ -39,7 +39,8 @@ export default function ProprietarioForm() {
       </View>
       <View style={styles.areaBtn}>
         <Pressable
-          tyle={[styles.botao, { backgroundColor: "#1d75cd" }]}
+          style={[styles.botao, 
+        {backgroundColor: "#1d75cd"}]}
           onPress={handleClick}
         >
           <Text style={styles.botaoText}>Cadastrar</Text>
