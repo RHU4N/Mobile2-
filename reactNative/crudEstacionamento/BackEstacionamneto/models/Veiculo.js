@@ -19,7 +19,7 @@ const Veiculo = db.sequelize.define(
     },
     fk_proprietario: {
       type: db.Sequelize.INTEGER,
-      references: { model: "Proprietario", key: "id_proprietario" },
+      references: { model: "proprietario", key: "id_proprietario" },
       onDelete: "CASCADE",
       allowNull: false,
     },
